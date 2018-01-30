@@ -7779,7 +7779,7 @@ var App = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: _App2.default.TodoApp },
-        _react2.default.createElement(_Title2.default, { todoName: 'ToDo', todoCount: true })
+        _react2.default.createElement(_Title2.default, { todoName: 'ToDo', todoCount: this.state.data })
       );
     }
   }]);
@@ -8425,54 +8425,31 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Title = function (_React$Component) {
-  _inherits(Title, _React$Component);
-
-  function Title(props) {
-    _classCallCheck(this, Title);
-
-    return _possibleConstructorReturn(this, (Title.__proto__ || Object.getPrototypeOf(Title)).call(this, props));
-  }
-
-  _createClass(Title, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'p',
-          null,
-          'Witamy w aplikacji ',
-          this.props.todoName
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Do zrobienia ',
-          this.props.todoCount.length,
-          ' zada\u0144.'
-        )
-      );
-    }
-  }]);
-
-  return Title;
-}(_react2.default.Component);
+var Title = function Title(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'h1',
+      null,
+      'Witaj w aplikacji ',
+      props.todoName
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Do zrobienia jest ',
+      props.todoCount.length,
+      ' zada\u0144'
+    )
+  );
+};
 
 exports.default = Title;
 

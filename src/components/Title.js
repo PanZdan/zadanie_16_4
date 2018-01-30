@@ -1,17 +1,13 @@
 import React from 'react';
 
-class Title extends React.Component {
-  constructor(props){
-    super(props);
-  }
-  render() {
-    return(
-      <div>
-        <p>Witamy w aplikacji {this.props.todoName}</p>
-        <p>Do zrobienia {this.props.todoCount.length} zadań.</p>
-      </div>
-      )
-  }
+const Title = props => {
+  return(
+    <div>
+      <h1>Witaj w aplikacji {props.todoName}</h1>
+      <p>Do zrobienia jest {props.todoCount.length} zadań</p>
+    </div>
+
+    )
 }
 
 export default Title;
