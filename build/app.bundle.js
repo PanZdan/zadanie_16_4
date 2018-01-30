@@ -7779,7 +7779,7 @@ var App = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: _App2.default.TodoApp },
-        _react2.default.createElement(_Title2.default, { todoName: 'ToDo', todoCount: this.state.data })
+        _react2.default.createElement(_Title2.default, { todoName: 'ToDo', todoCount: this.state.data.length })
       );
     }
   }]);
@@ -8445,7 +8445,7 @@ var Title = function Title(props) {
       'p',
       null,
       'Do zrobienia jest ',
-      props.todoCount.length,
+      props.todoCount,
       ' zada\u0144'
     )
   );
