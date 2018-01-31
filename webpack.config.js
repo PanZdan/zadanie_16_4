@@ -1,11 +1,8 @@
 const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
-plugins: [new HtmlWebpackPlugin({
-  template: 'src/index.html',
-  filename: 'index.html',
-  inject: 'body'
-})];
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 //webpack.config.js
 module.exports = {
@@ -33,5 +30,12 @@ module.exports = {
           ]
         }
       ]
-    }
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin(),
+        new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        filename: 'index.html',
+        inject: 'body'
+    })]
 };
