@@ -48,10 +48,11 @@ class App extends React.Component {
 
   onSubmitHandle(event) {
     event.preventDefault();
-    this.addTodo(this.state.value);
-    if (this.state.value) {
-      this.state.value = "";
-    }    
+      if (this.state.value !== "") {
+        this.addTodo(this.state.value);
+      } if (this.state.value) {
+        this.state.value = "";
+      }
   }
 
   render() {
