@@ -2,8 +2,8 @@
 
 .TodoApp {
   font-family: 'Ubuntu', sans-serif;
-  background-color: #F5F5F5;
-  color: #222;
+  background-color: #01508A;
+  color: #DADCDB;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
