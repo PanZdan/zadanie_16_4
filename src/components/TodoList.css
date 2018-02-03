@@ -1,0 +1,27 @@
+.TodoList {
+  margin: 0 auto;
+}
+p {
+	font-weight: 700;
+
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  text-align: center;
+  list-style: none;
+  padding: 5px;
+}
+
+button {
+  padding: 1px 6px;
+  margin-left: 15px;
+  border: none;
+}
+button:hover {
+  background-color: #16A085;
+  color: #fff;
+}
