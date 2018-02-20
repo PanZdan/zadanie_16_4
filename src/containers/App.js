@@ -43,28 +43,38 @@ class App extends React.Component {
   onChangeHandle(event) {
     this.setState({
       value: event.target.value
-    }); 
+    });
   }
 
   onSubmitHandle(event) {
     event.preventDefault();
-      if (this.state.value !== "") {
-        this.addTodo(this.state.value);
-      } if (this.state.value) {
-        this.state.value = "";
-      }
+    if (this.state.value !== "") {
+      this.addTodo(this.state.value);
+    }
+    if (this.state.value) {
+      this.state.value = "";
+    }
   }
 
   render() {
     return (
       <div className={style.TodoApp}>
-        <Title className={style.Title} todoName="ToDo" todoCount={this.state.data.length} />
-        <TodoForm className={style.TodoForm} 
+        <Title
+          className={style.Title}
+          todoName="ToDo"
+          todoCount={this.state.data.length}
+        />
+        <TodoForm
+          className={style.TodoForm}
           value={this.state.value}
           onChangeHandle={this.onChangeHandle.bind(this)}
           onSubmitHandle={this.onSubmitHandle.bind(this)}
         />
-        <TodoList className={style.TodoList} todoList={this.state.data} removeTodo={this.removeTodo.bind(this)}/>
+        <TodoList
+          className={style.TodoList}
+          todoList={this.state.data}
+          removeTodo={this.removeTodo.bind(this)}
+        />
       </div>
     );
   }

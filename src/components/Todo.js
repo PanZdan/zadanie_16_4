@@ -1,10 +1,12 @@
-import React from 'react';
-import style from './Todo.css';
+import React from "react";
+import style from "./Todo.css";
 
 const Todo = props => (
   <div>
-    <p>{item.text}</p>
-    button className="removeButton" onClick={()=>props.removeTodo(item.id)}>Usuń</button>
+    <p>{this.props.item.text}</p>
+    <button className="removeButton" onClick={() => props.removeTodo(item.id)}>
+      Usuń
+    </button>
   </div>
 );
 
